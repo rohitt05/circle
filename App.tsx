@@ -1,15 +1,24 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import react from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+import {StyleSheet, View, FlatList, Dimensions} from 'react-native';
+import HomeScreen from './src/screens/HomeScreen/HomeScreen';
+
+const {height} = Dimensions.get('window');
 
 const App = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Hello, world</Text>
+    <View style={styles.app}>
+      <HomeScreen />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+    position: 'relative',
+  },
+});
 
 export default App;
