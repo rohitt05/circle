@@ -9,7 +9,7 @@ export interface IPost {
     caption?: string;
     video?: string;
     videos?: string[];
-    thoughts?: string;
+    thought: string;
     user: IUser;
     noOfComments: number;
     noOfLikes: number;

@@ -13,6 +13,7 @@ import DoublePressable from '../DoublePressable';
 import Carousel from '../Carousel';
 import VideoPlayer from '../VideoPlayer';
 import VideoCarousel from '../VideoCarousel';
+import Thoughts from '../Thoughts';
 
 interface IFeedPost {
   post: IPost;
@@ -67,6 +68,12 @@ const FeedPost: React.FC<IFeedPost> = ({post}) => {
   } else if (post.videos) {
     // Corrected to check for `post.videos`
     content = <VideoCarousel videos={post.videos} onDoublePress={toggleLike} />;
+  } else if (post.thought) {
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <Thoughts thought={post?.thought} />
+      </DoublePressable>
+    );
   }
 
   return (
