@@ -9,22 +9,23 @@ interface IVideoPlayerProps {
 }
 
 const VideoPlayer: React.FC<IVideoPlayerProps> = ({uri}) => {
-  const [paused, setPaused] = useState(true); // Initialize paused state to true
+  const [paused, setPaused] = useState(true);
   const [muted, setMuted] = useState(false);
   const [aspectRatio, setAspectRatio] = useState(1);
 
   const togglePlayPause = () => {
-    setPaused(!paused);
+    setPaused(prevPaused => !prevPaused);
   };
 
   const toggleMute = () => {
-    setMuted(!muted);
+    setMuted(prevMuted => !prevMuted);
   };
 
-  const onVideoLoad = (data: {
+  const onVideoLoad = ({
+    naturalSize: {width, height},
+  }: {
     naturalSize: {width: number; height: number};
   }) => {
-    const {width, height} = data.naturalSize;
     setAspectRatio(width / height);
   };
 

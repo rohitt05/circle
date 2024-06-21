@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable react-native/no-inline-styles */
+import React from 'react';
 import {
   View,
   Text,
@@ -7,21 +7,67 @@ import {
   Image,
   TouchableOpacity,
   Linking,
+  ScrollView,
 } from 'react-native';
-import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import user from '../../assets/data/user.json';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import TopTabNavigation from '../../components/Navigation/TopTabNavigation';
 
 const ProfileScreen = () => {
+  // Handle press to open user link
   const handlePress = () => {
     Linking.openURL(user.link);
   };
+
+  // Render profile image and edit profile button
+  const renderProfileImageAndEdit = () => (
+    <View style={styles.profileImageContainer}>
+      <Image
+        source={{uri: user.profileImage}}
+        style={styles.userProfileImage}
+      />
+      <TouchableOpacity style={styles.editContainer} onPress={() => {}}>
+        <Text style={styles.editText}>Edit Profile</Text>
+        <FontAwesome6
+          name="user-pen"
+          size={16}
+          color="#4E5788"
+          style={styles.editIcon}
+        />
+      </TouchableOpacity>
+    </View>
+  );
+
+  // Render user stats boxes (Posts, Circle, Followers, Following)
+  const renderUserStats = () => (
+    <View style={styles.userStatsContainer}>
+      <View style={styles.userStatsBox}>
+        <Text style={styles.userStatNumber}>{user.posts.length}</Text>
+        <Text style={styles.userStatName}>Posts</Text>
+      </View>
+      <View style={styles.userStatsBox}>
+        <Text style={styles.userStatNumber}>{user.circle.length}</Text>
+        <Text style={styles.userStatName}>Circle</Text>
+      </View>
+      <View style={styles.userStatsBox}>
+        <Text style={styles.userStatNumber}>{user.followers.length}</Text>
+        <Text style={styles.userStatName}>Followers</Text>
+      </View>
+      <View style={styles.userStatsBox}>
+        <Text style={styles.userStatNumber}>{user.following.length}</Text>
+        <Text style={styles.userStatName}>Following</Text>
+      </View>
+    </View>
+  );
+
   return (
-    <View style={styles.profileScreenContainer}>
+    <ScrollView style={styles.profileScreenContainer}>
+      {/* User details section */}
       <View style={styles.userDetailsPart}>
+        {/* Back and setting icons */}
         <View style={styles.backAndSettingIconBar}>
           <TouchableOpacity style={styles.iconButton}>
             <Ionicons name="arrow-back" size={25} color="#fff" />
@@ -35,27 +81,15 @@ const ProfileScreen = () => {
             />
           </TouchableOpacity>
         </View>
-        <View style={styles.userDetailsBox}>
-          <View style={{flexDirection: 'column'}}>
-            <Image
-              source={{uri: user.profileImage}}
-              style={styles.userProfileImage}
-            />
-            {/* Add the "Edit" text here */}
-            <TouchableOpacity style={styles.editContainer} onPress={() => ({})}>
-              <Text style={styles.editText}>Edit Profile</Text>
-              <FontAwesome6
-                name="user-pen"
-                size={16}
-                color="#4E5788"
-                style={styles.editIcon}
-              />
-            </TouchableOpacity>
-          </View>
 
+        {/* User profile image and edit */}
+        <View style={styles.userDetailsBox}>
+          {renderProfileImageAndEdit()}
           <View style={styles.userNameDetails}>
             <Text style={styles.nameOfUser}>{user.name}</Text>
             <Text style={styles.username}>@{user.username}</Text>
+
+            {/* Buttons: Add to Circle and Message */}
             <View style={styles.buttonBoxContainer}>
               <LinearGradient
                 colors={['#2C2F60', '#4E5788']}
@@ -72,7 +106,8 @@ const ProfileScreen = () => {
                 </TouchableOpacity>
               </LinearGradient>
             </View>
-            {/* {user.accountType === 'public' && ( */}
+
+            {/* Follow button */}
             <View style={styles.followButton}>
               <LinearGradient
                 colors={['#1B204C', '#4E5788']}
@@ -82,39 +117,26 @@ const ProfileScreen = () => {
                 </TouchableOpacity>
               </LinearGradient>
             </View>
-            {/* )} */}
           </View>
         </View>
-        {/* user's bio and link */}
+
+        {/* User bio and link */}
         <View style={styles.userBioLinkBox}>
           <Text style={styles.userBioText}>{user.bio}</Text>
           <TouchableOpacity onPress={handlePress}>
             <Text style={styles.userLinkText}>{user.link}</Text>
           </TouchableOpacity>
         </View>
-        {/* user stats numbers. posts, circle, followers, following */}
-        <View style={styles.userStatsContainer}>
-          <View style={styles.userStatsBox}>
-            <Text style={styles.userStatNumber}>{user.posts.length}</Text>
-            <Text style={styles.userStatName}>Posts</Text>
-          </View>
-          <View style={styles.userStatsBox}>
-            <Text style={styles.userStatNumber}>{user.circle.length}</Text>
-            <Text style={styles.userStatName}>Circle</Text>
-          </View>
-          {/* {user.accountType === 'public' && ( */}
-          <View style={styles.userStatsBox}>
-            <Text style={styles.userStatNumber}>{user.followers.length}</Text>
-            <Text style={styles.userStatName}>Followers</Text>
-          </View>
-          {/* )} */}
-          <View style={styles.userStatsBox}>
-            <Text style={styles.userStatNumber}>{user.following.length}</Text>
-            <Text style={styles.userStatName}>Following</Text>
-          </View>
-        </View>
+
+        {/* User stats */}
+        {renderUserStats()}
       </View>
-    </View>
+
+      {/* TopTabNavigation */}
+      <View style={styles.topTabNavContainer}>
+        <TopTabNavigation />
+      </View>
+    </ScrollView>
   );
 };
 
@@ -126,7 +148,7 @@ const styles = StyleSheet.create({
   userDetailsPart: {
     backgroundColor: '#1B204C',
     padding: 20,
-    borderRadius: 30,
+    borderRadius: 35,
     margin: 1,
     top: 5,
   },
@@ -146,12 +168,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     top: 5,
   },
+  profileImageContainer: {
+    flexDirection: 'column',
+  },
   userProfileImage: {
     width: 100,
     aspectRatio: 1,
     borderRadius: 20,
     marginRight: 20,
-    // marginVetical or top
   },
   userNameDetails: {
     left: 20,
@@ -206,6 +230,7 @@ const styles = StyleSheet.create({
   },
   userBioLinkBox: {
     padding: 10,
+    top: 3,
   },
   userBioText: {
     color: 'white',
@@ -252,6 +277,11 @@ const styles = StyleSheet.create({
   editIcon: {
     marginLeft: 5, // Adjust margin as needed
     marginTop: -2,
+  },
+  topTabNavContainer: {
+    flex: 1,
+    // paddingTop: 10,
+    // borderRadius: 30,
   },
 });
 

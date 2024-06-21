@@ -8,7 +8,6 @@ interface ICommentProps {
   comment: IComment;
   includeDetails?: boolean;
 }
-// remove the includedetails if the modal works as requirement from here as well as from commentscreen
 
 const Comment: React.FC<ICommentProps> = ({
   comment,
@@ -17,7 +16,7 @@ const Comment: React.FC<ICommentProps> = ({
   const [isLiked, setIsLiked] = useState(false);
 
   const toggleLike = () => {
-    setIsLiked(v => !v);
+    setIsLiked(prevState => !prevState);
   };
 
   return (
