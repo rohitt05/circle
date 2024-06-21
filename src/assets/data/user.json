@@ -1,10 +1,10 @@
 {
     "id": "u1",
     "backgroundImage": "https://i.ytimg.com/vi/UgQB7lacdtk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAClgWKAgwIABABGDkgXShlMA8=&rs=AOn4CLD6nE1Eli4soeS8l0lBwMkwEFzbzw",
-    "profileImage": "https://image.tmdb.org/t/p/original/vCawjbOLVw9A7kzKvjIUX3nFtJq.jpg",
-    "name": "Vadim Savin",
-    "bio": "🧑🏻‍💻 A software engineer trying to have an impact in the world! • 🚀 35k+ on YouTube #notJustDev 📈 • Follow me for value-packed dev content 💡",
-    "username": "vadimnotjustdev",
+    "profileImage": "https://avatarfiles.alphacoders.com/177/177294.png",
+    "name": "Game Of Thrones",
+    "bio": "The Greatest Tv Show, To exists till date. Have you'll watched House Of the Dragon, yet?",
+    "username": "gameofthrones",
     "link": "https://google.com",
     "accountType": "private",
     "posts": [
@@ -51,13 +51,7 @@
             "images": [
                 "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
             ],
-            "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
-            "user": {
-                "id": "u1",
-                "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
-                "username": "vadimnotjustdev"
-            },
-            "nofComments": 11
+            "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?"
         },
         {
             "id": "7",
@@ -171,5 +165,20 @@
             ],
             "caption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?"
         }
+    ],
+    "circle": [
+        "user1",
+        "user2",
+        "user3"
+    ],
+    "following": [
+        "user1",
+        "user2",
+        "user3"
+    ],
+    "followers": [
+        "user4",
+        "user5",
+        "user6"
     ]
 }

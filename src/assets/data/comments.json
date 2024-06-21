@@ -1,151 +1,121 @@
 [
     {
         "id": "c1",
-        "comment": "Reprehenderit quo but reprehenderit consequuntur.",
+        "comment": "Hello, how are ya? And how is the whole team doing?",
         "user": {
             "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
-            "username": "vadimnotjustdev"
+            "profileImage": "https://wallpaperaccess.com/full/840280.jpg",
+            "username": "gameofthrones"
         },
         "replies": [
             {
                 "id": "r1",
-                "reply": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "reply": "Hello, how are ya?",
                 "user": {
                     "id": "u2",
-                    "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-                    "username": "notjustvadim"
+                    "profileImage": "https://wallpaperaccess.com/full/1121048.jpg",
+                    "username": "jonsnow"
                 }
             }
         ]
     },
     {
         "id": "c2",
-        "comment": "Dicta perspiciatis natus. Nihil perspiciatis. Incididunt. Dolor aliquam commodo eius but incididunt nor id aliquid. Sint quae eiusmod aliquid do nemo nor quasi.",
+        "comment": "Absolutely stunning!",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u3",
+            "profileImage": "https://wallpaperaccess.com/full/1234567.jpg",
+            "username": "daenerystargaryen"
         },
-        "replies": [
-            {
-                "id": "r1",
-                "reply": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "user": {
-                    "id": "u2",
-                    "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-                    "username": "notjustvadim"
-                }
-            }
-        ]
+        "replies": []
     },
     {
         "id": "c3",
-        "comment": "nventore enim quaerat tempor nor quis aperiam. Magni illum id and omnis ab. Quae.",
+        "comment": "The Mother of Dragons!",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u4",
+            "profileImage": "https://wallpaperaccess.com/full/1401234.jpg",
+            "username": "tyrionlannister"
         },
-        "replies": [
-            {
-                "id": "r1",
-                "reply": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "user": {
-                    "id": "u2",
-                    "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-                    "username": "notjustvadim"
-                }
-            }
-        ]
+        "replies": []
     },
     {
         "id": "c4",
-        "comment": "Inventore illo. Vel id numquam. Nesciunt. Illum. Eius sunt but dolores or omnis ma",
+        "comment": "Wise words from a wise man",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u5",
+            "profileImage": "https://wallpaperaccess.com/full/1512345.jpg",
+            "username": "sansa"
         },
-        "replies": [
-            {
-                "id": "r1",
-                "reply": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "user": {
-                    "id": "u2",
-                    "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-                    "username": "notjustvadim"
-                }
-            }
-        ]
+        "replies": []
     },
     {
         "id": "c5",
-        "comment": " anim, elit. Nulla sed, omnis explicabo yet aliqua but est but ex. Nisi. Voluptate mollit. Numquam velit illo. Lorem irure. Eiusmod commodi so occaecat dicta, or ",
+        "comment": "Lovely place!",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u6",
+            "profileImage": "https://wallpaperaccess.com/full/1612346.jpg",
+            "username": "arya"
         },
         "replies": []
     },
     {
         "id": "c6",
-        "comment": "Quo autem nostrud.",
+        "comment": "Great memories!",
         "user": {
             "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
-            "username": "vadimnotjustdev"
+            "profileImage": "https://wallpaperaccess.com/full/840280.jpg",
+            "username": "gameofthrones"
         },
         "replies": []
     },
     {
         "id": "c7",
-        "comment": "Ex vel. Ex sed for ea so doloremque eaque so magni, reprehenderit. Vitae. Pers ",
+        "comment": "Can't wait for the next episode!",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u3",
+            "profileImage": "https://wallpaperaccess.com/full/1234567.jpg",
+            "username": "daenerystargaryen"
         },
         "replies": []
     },
     {
         "id": "c8",
-        "comment": "Ex vel. Ex sed for ea so doloremque eaque so magni, reprehenderit. Vitae. Pers ",
+        "comment": "Who will take the throne?",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u5",
+            "profileImage": "https://wallpaperaccess.com/full/1512345.jpg",
+            "username": "sansa"
         },
         "replies": []
     },
     {
         "id": "c9",
-        "comment": "Ex vel. Ex sed for ea so doloremque eaque so magni, reprehenderit. Vitae. Pers ",
+        "comment": "Always a wise statement.",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u6",
+            "profileImage": "https://wallpaperaccess.com/full/1612346.jpg",
+            "username": "arya"
         },
         "replies": []
     },
     {
         "id": "c10",
-        "comment": "Ex vel. Ex sed for ea so doloremque eaque so magni, reprehenderit. Vitae. Pers ",
+        "comment": "True to their word.",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u2",
+            "profileImage": "https://wallpaperaccess.com/full/1121048.jpg",
+            "username": "jonsnow"
         },
         "replies": []
     },
     {
         "id": "c11",
-        "comment": "Ex vel. Ex sed for ea so doloremque eaque so magni, reprehenderit. Vitae. Pers ",
+        "comment": "Looks delicious!",
         "user": {
-            "id": "u1",
-            "profileImage": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
-            "username": "vadimnotjustdev"
+            "id": "u3",
+            "profileImage": "https://wallpaperaccess.com/full/1234567.jpg",
+            "username": "daenerystargaryen"
         },
         "replies": []
     }

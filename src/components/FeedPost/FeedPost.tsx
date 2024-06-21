@@ -101,18 +101,20 @@ const FeedPost: React.FC<IFeedPost> = ({post}) => {
       </View>
 
       {/* Caption */}
-      <View style={styles.captionBox}>
-        <Text
-          numberOfLines={isCaptionExpanded ? 0 : 2}
-          style={styles.captionText}>
-          {post.caption}
-        </Text>
-        {post.caption && post.caption.length > 90 && (
-          <Text style={styles.moreText} onPress={toggleCaptionExpanded}>
-            {isCaptionExpanded ? 'less' : 'more'}
+      {!post.thought && post.caption && (
+        <View style={styles.captionBox}>
+          <Text
+            numberOfLines={isCaptionExpanded ? 0 : 2}
+            style={styles.captionText}>
+            {post.caption}
           </Text>
-        )}
-      </View>
+          {post.caption && post.caption.length > 90 && (
+            <Text style={styles.moreText} onPress={toggleCaptionExpanded}>
+              {isCaptionExpanded ? 'less' : 'more'}
+            </Text>
+          )}
+        </View>
+      )}
 
       {/* Content */}
       <View style={styles.contentBox}>
